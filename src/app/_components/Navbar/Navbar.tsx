@@ -13,7 +13,7 @@ const NavBar = () => {
       <h1 className="flex items-center z-20 font-bold text-2xl">{logo}</h1>
       <div className="flex gap-2 z-20">
         {cta.map((cta) => (
-          <Button label={cta.label} type={cta.type} />
+          <Button key={cta.label} label={cta.label} type={cta.type} />
         ))}
         <span onClick={toggle} className="ml-2 my-auto xl:hidden hover:cursor-pointer">
           {!value ? <Menu size={30}/> : <X size={30}/>}

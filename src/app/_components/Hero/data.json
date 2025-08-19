@@ -6,5 +6,8 @@
   "cta": [
     { "label": "Try for free", "type": "primary" },
     { "label": "Get a demo", "type": "secondary" }
-  ]
+  ],
+  "footer": "16,000+ small and medium businesses trust Remote",
+  "brands": ["bluebird", "galaxy", "berry", "chameleon", "ship"]
+  
 }
