@@ -1,0 +1,14 @@
+{
+  "logo": "Remote",
+  "menu": [
+    { "label": "About" },
+    { "label": "Feature" },
+    { "label": "Pricing" },
+    { "label": "Contact" },
+    { "label": "Blog" }
+  ],
+  "cta": [
+    { "label": "Try for free", "type": "primary" },
+    { "label": "Get a demo", "type": "secondary" }
+  ]
+}
