@@ -15,10 +15,10 @@ export default function Button({
       onClick={onClick}
     >
       <div className="relative overflow-hidden">
-        <span className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center  group-hover:-translate-y-full transition">
+        <span className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center  group-hover:-translate-y-full">
           {label}
         </span>
-        <span className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center   translate-y-full  group-hover:translate-y-0 transition">
+        <span className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center   translate-y-full  group-hover:translate-y-0">
           {label}
         </span>
         <span className="opacity-0">{label}</span>

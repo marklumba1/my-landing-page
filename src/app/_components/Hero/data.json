@@ -1,0 +1,10 @@
+{
+  "badge": "New",
+  "announcement": "Announcing our $2.3M Seed Round",
+  "headline": "Say hello to smarter hiring",
+  "subheadline": "A hiring platform that works the way you do.",
+  "cta": [
+    { "label": "Try for free", "type": "primary" },
+    { "label": "Get a demo", "type": "secondary" }
+  ]
+}

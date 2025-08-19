@@ -7,3 +7,6 @@
 body{
     @apply max-w-7xl mx-auto p-3
 }
+*{
+    @apply transition
+}
