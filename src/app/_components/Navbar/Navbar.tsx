@@ -10,8 +10,7 @@ const NavBar = () => {
 
   return (
     <nav className="flex relative justify-between">
-      <h1 className="border font-bold text-xl">{logo}</h1>
-
+      <h1 className="flex items-center font-bold text-2xl">{logo}</h1>
       <div className="flex gap-2">
         {cta.map((cta) => (
           <Button label={cta.label} type={cta.type} />
@@ -21,9 +20,9 @@ const NavBar = () => {
         </span>
       </div>
 
-      <ul className={`${!value ? "hidden" : ""} absolute -z-10 xl:flex transition h-auto bg-white top-10 xl:top-0 xl:bg-transparent xl:h-full flex flex-col xl:flex-row left-0 right-0  gap-2 justify-center items-start xl:items-center`}>
+      <ul className={`${!value ? "hidden" : ""} absolute xl:flex border-red-500 bg-white top-[100%] left-0 right-0 xl:bg-transparent flex flex-col xl:flex-row  gap-4 justify-center items-start xl:items-center xl:top-0 xl:bottom-0`}>
         {menu.map(({ label }) => (
-          <li key={label}>{label}</li>
+          <li key={label} className="hover:cursor-pointer">{label}</li>
         ))}
       </ul>
     </nav>

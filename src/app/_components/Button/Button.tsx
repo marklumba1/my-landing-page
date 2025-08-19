@@ -11,7 +11,7 @@ export default function Button({
     const buttonTypeCss = type === `secondary` ? `bg-black text-white` : ``
   return (
     <button
-      className={`border rounded-xl px-4 py-2 relative group ${buttonTypeCss}`}
+      className={`border rounded-xl px-4 py-2 relative group shadow ${buttonTypeCss}`}
       onClick={onClick}
     >
       <div className="relative overflow-hidden">
