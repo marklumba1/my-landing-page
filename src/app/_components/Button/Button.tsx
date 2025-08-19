@@ -8,7 +8,7 @@ export default function Button({
   onClick?: () => void;
   type?:  string;
 }) {
-    const buttonTypeCss = type === `secondary` ? `bg-black text-white` : ``
+    const buttonTypeCss = type === `secondary` ? `bg-black text-white` : `text-black bg-white`
   return (
     <button
       className={`border rounded-xl px-4 py-2 relative group shadow ${buttonTypeCss}`}

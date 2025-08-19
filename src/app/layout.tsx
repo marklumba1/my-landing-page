@@ -4,13 +4,13 @@ const RootLayout = ({children} : {children: React.ReactNode}) => {
     return (
         <html lang="en">
             <body>
-                <header>
+                <header className="max-w-7xl mx-auto p-5">
                     <NavBar />
                 </header>
                 <main>
                     {children}
                 </main>
-                <footer>
+                <footer className="max-w-7xl mx-auto p-5">
                     Footer
                 </footer>
             </body>

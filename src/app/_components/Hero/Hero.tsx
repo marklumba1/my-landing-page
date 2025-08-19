@@ -10,7 +10,7 @@ export default function Hero() {
       <p>{subheadline}</p>
       <div className="flex gap-2 w-full justify-center">
         {cta.map((cta) => (
-          <Button label={cta.label} type={cta.type} />
+          <Button key={cta.label} label={cta.label} type={cta.type} />
         ))}
       </div>
     </div>
