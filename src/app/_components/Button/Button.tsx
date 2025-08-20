@@ -1,6 +1,5 @@
+"use client";
 import type { LucideIcon } from "lucide-react";
-
-`use client`;
 export interface ButtonProps {
   label: string;
   onClick?: () => void;
@@ -13,7 +12,7 @@ export default function Button({
   onClick,
   type = "primary",
   icon: Icon,
-  className
+  className = ""
 }: ButtonProps) {
   const buttonTypeCss =
     type === `secondary` ? `bg-black text-white` : `text-black bg-white`;
