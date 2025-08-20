@@ -8,7 +8,7 @@ import Background from "./_components/Background/Background";
 import TextHighlight from "./_components/Highlight/TextHighlight";
 const HomePage: React.FC = () => {
   return (
-    <div className="flex flex-col gap-40 py-24">
+    <div className="flex flex-col gap-20 py-20">
       <section>
         <Hero className="px-10" />
       </section>

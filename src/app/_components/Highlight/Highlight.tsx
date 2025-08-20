@@ -22,9 +22,9 @@ export default function Highlight({
     <div className={`${className} flex items-center flex-col gap-5`}>
       {logo && <div>{logo}</div>}
 
-      <p className="text-5xl max-w-[500px] text-center">
+      <span className="text-5xl max-w-[500px] text-center">
         {title}
-      </p>
+      </span>
       <p className="text-center">{description}</p>
       {children && children}
       {cta && <Button label={cta.label} icon={cta.icon} type={cta.type} />}
