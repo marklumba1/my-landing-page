@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Card, { CardProps } from "../Card/Card";
-import Background from "../Background/Background";
 
 interface FeaturesProps {
   title: { text: string; className: string };

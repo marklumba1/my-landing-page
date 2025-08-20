@@ -1,4 +1,4 @@
-const fetchUtil = async <T = any> (endpoint: string): Promise<T> => {
+const fetchUtil = async <T = unknown> (endpoint: string): Promise<T> => {
   try {
     const response = await fetch(endpoint);
     if (!response.ok) throw new Error(`Error Fetch:${response.statusText}`);

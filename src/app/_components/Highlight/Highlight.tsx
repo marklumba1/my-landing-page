@@ -1,7 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import Button, { ButtonProps } from "../Button/Button";
-import brushStroke from "../../../../public/brushstroke.png";
-import Image from "next/image";
 import { ReactNode } from "react";
 
 interface HighlightProps {
