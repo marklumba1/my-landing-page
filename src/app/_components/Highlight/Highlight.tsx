@@ -7,17 +7,19 @@ interface HighlightProps {
   title: ReactNode;
   description?: string;
   cta?: ButtonProps;
-  children?: ReactNode
+  children?: ReactNode;
+  className?: string;
 }
 export default function Highlight({
   logo,
   title,
   description,
   cta,
-  children
+  children,
+  className
 }: HighlightProps) {
   return (
-    <div className="flex items-center flex-col gap-5">
+    <div className={`${className} flex items-center flex-col gap-5`}>
       {logo && <div>{logo}</div>}
 
       <p className="text-5xl max-w-[500px] text-center">

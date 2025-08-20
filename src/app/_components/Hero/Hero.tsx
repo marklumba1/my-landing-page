@@ -5,12 +5,12 @@ import Button from "../Button/Button";
 import data from "./data.json";
 import Background from "../Background/Background";
 
-export default function Hero() {
+export default function Hero({className}: {className?: string}) {
   const { headline, subheadline, announcement, cta, badge, footer, brands } =
     data;
   return (
     <Background>
-      <div className="flex flex-col gap-5 items-center max-w-7xl mx-auto">
+      <div className={`${className} flex flex-col gap-5 items-center max-w-7xl mx-auto`}>
         <Announcement link="/" text={announcement} label={badge} />
         <h1 className="font-bold text-5xl text-center max-w-96">{headline}</h1>
         <p>{subheadline}</p>
@@ -31,7 +31,7 @@ export default function Hero() {
             src="/heropic.png"
             width={1500}
             height={1500}
-            className="border"
+            className="border max-h-[500px] w-auto"
             alt="hero"
           />
         </div>
