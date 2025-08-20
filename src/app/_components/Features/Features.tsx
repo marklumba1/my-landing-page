@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Card, { CardProps } from "../Card/Card";
 
-interface FeaturesProps {
+export interface FeaturesProps {
   title: { text: string; className: string };
   subtitle: { text: string; className: string };
   features: CardProps[];

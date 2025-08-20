@@ -4,7 +4,7 @@ import Button, { ButtonProps } from "../Button/Button";
 import { ReactNode } from "react";
 
 interface HighlightProps {
-  logo?: LucideIcon;
+  logo?: ReactNode;
   title: string;
   description?: string;
   cta?: ButtonProps;
@@ -12,7 +12,7 @@ interface HighlightProps {
   children?: ReactNode
 }
 export default function Highlight({
-  logo: Logo,
+  logo,
   title,
   description,
   cta,
@@ -21,7 +21,7 @@ export default function Highlight({
 }: HighlightProps) {
   return (
     <div className="flex items-center flex-col gap-5">
-      {Logo && <Logo size={50} />}
+      {logo && <div>{logo}</div>}
 
       <p className="text-5xl max-w-[500px] text-center">
         {title}{" "}

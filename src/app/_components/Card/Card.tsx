@@ -14,10 +14,7 @@ export interface CardProps {
     url: string;
     size: number;
   };
-  icon?: {
-    component: LucideIcon;
-    className?: string;
-  };
+  icon?: React.ReactNode;
   gap?: number;
 }
 export default function Card({
@@ -39,7 +36,7 @@ export default function Card({
           height={image.size}
         />
       )}
-      {icon && <icon.component className={`${icon.className}`} />}
+      {icon && icon}
       <p className={`${title.className}`}>{title.text}</p>
       <p>{description}</p>
       {cta && <Button {...cta} className="w-fit" />}

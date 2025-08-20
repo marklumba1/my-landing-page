@@ -12,10 +12,10 @@ const HomePage: React.FC = () => {
       </section>
       <section className="max-w-7xl mx-auto">
         <Highlight
-          logo={Shapes}
+          logo={<Shapes size={50} />}
           title="Everything you need, all in"
           textHighlight="one place"
-          cta={{ label: "Get a demo", type: "secondary", icon: Book }}
+          cta={{ label: "Get a demo", type: "secondary", icon: <Book/> }}
         />
       </section>
       <section className="grid grid-cols-2 xl:flex gap-5 max-w-7xl mx-auto">
