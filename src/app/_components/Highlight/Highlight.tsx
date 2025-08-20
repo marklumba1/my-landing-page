@@ -1,5 +1,4 @@
 "use client";
-import type { LucideIcon } from "lucide-react";
 import Button, { ButtonProps } from "../Button/Button";
 import { ReactNode } from "react";
 
@@ -25,7 +24,7 @@ export default function Highlight({
 
       <p className="text-5xl max-w-[500px] text-center">
         {title}{" "}
-        <span className=" bg-lime-300 whitespace-nowrap [mask-image:url('/brushStroke.png')]    [mask-size:100%_90%] [mask-repeat:no-repeat] [mask-position:center]">
+        <span className=" bg-lime-300 whitespace-nowrap [mask-image:url('/brushstroke.png')]    [mask-size:100%_90%] [mask-repeat:no-repeat] [mask-position:center]">
           {textHighlight}
         </span>
       </p>
