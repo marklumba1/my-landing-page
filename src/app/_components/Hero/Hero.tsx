@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Announcement from "../Announcement/Announcement";
 import Button from "../Button/Button";

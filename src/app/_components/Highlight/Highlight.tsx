@@ -1,3 +1,4 @@
+"use client";
 import type { LucideIcon } from "lucide-react";
 import Button, { ButtonProps } from "../Button/Button";
 import { ReactNode } from "react";
