@@ -1,11 +1,12 @@
 import Hero from "./_components/Hero/Hero";
 import Highlight from "./_components/Highlight/Highlight";
 import { Shapes, Book } from "lucide-react";
-import { cards } from "./constants";
+import { cards, growthLevels, realtimeUpdates } from "./constants";
 import Card from "./_components/Card/Card";
+import Features from "./_components/Features/Features";
 const HomePage: React.FC = () => {
   return (
-    <div className="flex flex-col gap-20 py-24">
+    <div className="flex flex-col gap-20 py-24 px-2">
       <section>
         <Hero />
       </section>
@@ -17,8 +18,14 @@ const HomePage: React.FC = () => {
           cta={{ label: "Get a demo", type: "secondary", icon: Book }}
         />
       </section>
-      <section className="flex gap-5 max-w-7xl mx-auto">
-        {cards.map(card => <Card key={card.title} {...card}/>)}
+      <section className="grid grid-cols-2 xl:flex gap-5 max-w-7xl mx-auto">
+        {cards.map(card => <Card key={card.title.text} {...card}/>)}
+      </section>
+      <section className="max-w-7xl mx-auto">
+        <Features {...realtimeUpdates} />
+      </section>
+      <section className="max-w-7xl mx-auto">
+        <Features {...growthLevels} reverse={true} />
       </section>
     </div>
   );
