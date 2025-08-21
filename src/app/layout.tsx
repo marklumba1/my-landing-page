@@ -1,5 +1,6 @@
 import NavBar from "./_components/Navbar/Navbar";
 import "../app/globals.css";
+import Footer from "./_components/Footer/Footer";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
@@ -10,7 +11,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </header>
         <main>{children}</main>
-        <footer className="max-w-7xl mx-auto p-5">Footer</footer>
+        <Footer />
       </body>
     </html>
   );

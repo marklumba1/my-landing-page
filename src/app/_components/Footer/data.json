@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Product",
+    "items": [
+      {
+        "label": "Homepage",
+        "badge": null
+      },
+      {
+        "label": "Homepage 2",
+        "badge": "New"
+      },
+      {
+        "label": "New",
+        "badge": "New"
+      },
+      {
+        "label": "Solutions",
+        "badge": null
+      },
+      {
+        "label": "Feature",
+        "badge": null
+      },
+      {
+        "label": "Pricing",
+        "badge": null
+      },
+      {
+        "label": "Newsletter",
+        "badge": null
+      }
+    ]
+  },
+  {
+    "title": "Company",
+    "items": [
+      {
+        "label": "About",
+        "badge": null
+      },
+      {
+        "label": "Careers",
+        "badge": "We're hiring!"
+      },
+      {
+        "label": "We're hiring!",
+        "badge": "Careers"
+      },
+      {
+        "label": "Contact us",
+        "badge": null
+      },
+      {
+        "label": "Privacy",
+        "badge": null
+      },
+      {
+        "label": "Log in",
+        "badge": null
+      }
+    ]
+  },
+  {
+    "title": "Resources",
+    "items": [
+      {
+        "label": "Start here",
+        "badge": null
+      },
+      {
+        "label": "Tutorials",
+        "badge": null
+      },
+      {
+        "label": "Blog",
+        "badge": null
+      },
+      {
+        "label": "Article",
+        "badge": null
+      }
+    ]
+  }
+]
