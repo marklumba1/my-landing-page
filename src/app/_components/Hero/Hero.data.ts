@@ -1,15 +1,15 @@
 import HeroProps from "./Hero.types";
 
 const heroData: HeroProps = {
-  headline: "Building Interactive, Scalable Web Experiences",
+  headline: "Hi, <b>I’m Mark O. Lumba</b> — creating standout <span class=highlight>frontend experiences.</span>",
   subheadline:
-    "Crafting modern web apps with React, Next.js, and TypeScript. I focus on reusable components, clean code, and user-friendly interfaces.",
+    "I build interactive and scalable web applications using React, Next.js, and TypeScript. My focus is on creating reusable components, clean and maintainable code, and seamless user experiences.",
   cta: [
-    { label: "View Projects", type: "primary" },
-    { label: "See a Demo", type: "secondary" },
+    { label: "View My Projects", type: "primary" },
+    { label: "See a Live Demo", type: "secondary" },
   ],
   footer:
-    "Over 20 projects delivered across personal and professional front-end applications",
+    "Delivered over 20+ front-end projects, creating maintainable components and interactive user experiences.",
   brands: ["React", "Next.js", "TypeScript", "Tailwind CSS", "AEM"],
 };
 
