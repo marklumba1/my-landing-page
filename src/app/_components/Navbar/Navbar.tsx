@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import NavBarProps from "./NavBar.types";
 import Link from "next/link";
 
-const NavBar: React.FC<NavBarProps> = ({ brand, links, ctas }) => {
+const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
   const { value, toggle } = useToggle();
 
   return (
