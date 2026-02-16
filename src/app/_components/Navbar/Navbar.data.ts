@@ -1,17 +1,17 @@
 import NavBarProps from "./NavBar.types";
 
 const navBarData: NavBarProps = {
-  brand: "Remote",
+  brand: "Mark Lumba",
   links: [
-    { label: "About", url: "/about" },
-    { label: "Feature", url: "/feature" },
-    { label: "Pricing", url: "/pricing" },
-    { label: "Contact", url: "/contact" },
-    { label: "Blog", url: "/blog" },
+    { label: "About Me", url: "/about" },
+    { label: "Experience", url: "/experience" },
+    { label: "Projects", url: "/projects" },
+    { label: "Education", url: "/education" },
+    { label: "Contact Me", url: "/contact" },
   ],
   ctas: [
-    { label: "Try for free", type: "primary" },
-    { label: "Get a demo", type: "secondary" },
+    { label: "View Projects", type: "primary"},
+    { label: "See a demo", type: "secondary"},
   ],
 };
 

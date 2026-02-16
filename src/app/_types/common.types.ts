@@ -1,11 +1,6 @@
-export type CTAType = "primary" | "secondary" | "link"
+export type ButtonType = "primary" | "secondary" | "link"
 
-export type CTA = {
+export type LinkItem = {
     label: string,
-    type?: CTAType
-}
-
-export type Link = {
-    label: string,
-    url: string
+    url: string,
 }

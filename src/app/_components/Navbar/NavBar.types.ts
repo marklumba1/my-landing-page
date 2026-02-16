@@ -1,7 +1,8 @@
-import { CTA, Link } from "@/app/_types/common.types";
+import { ButtonProps } from "../Button/Button.types";
+import { LinkItem } from "@/app/_types/common.types";
 
 export default interface NavBarProps {
   brand: string;
-  links: Link[];
-  ctas: CTA[];
+  links: LinkItem[];
+  ctas: ButtonProps[];
 }

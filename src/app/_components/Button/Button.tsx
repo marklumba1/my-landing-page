@@ -1,26 +1,23 @@
 "use client";
-export interface ButtonProps {
-  label: string;
-  onClick?: () => void;
-  type?: string;
-  icon?: React.ReactNode;
-  className?: string;
-}
-export default function Button({
+
+import { ButtonProps } from "./Button.types";
+
+const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
   type = "primary",
   icon,
   className = "",
-}: ButtonProps) {
+}) => {
   const buttonTypeCss =
     type === `secondary` ? `bg-black text-white` : `text-black bg-white`;
+  const Icon = icon; // this converts icon to a jsx element
   return (
     <button
       className={`${className} border flex gap-2 items-center rounded-xl px-4 py-2 relative group shadow ${buttonTypeCss}`}
       onClick={onClick}
     >
-      {icon && icon}
+      {Icon && <Icon size={10} />}
       <div className="relative overflow-hidden">
         <span className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center  group-hover:-translate-y-full">
           {label}
@@ -32,4 +29,6 @@ export default function Button({
       </div>
     </button>
   );
-}
+};
+
+export default Button;
