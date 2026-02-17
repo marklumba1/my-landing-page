@@ -13,7 +13,7 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
   const navLinkBarClass = scrollY > 0 ? "bg-yellow-400" : "bg-green-500";
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 ${navClass} transition-all ease-in p-5 md:px-0 z-20 shadow-sm`}
+      className={`fixed top-0 left-0 right-0 ${navClass} transition-all ease-in px-5 py-6  md:px-0 z-20 shadow-sm`}
     >
       <div className="container mx-auto flex justify-between  text-3xl ">
         <Link href={"#top"} className="text-nowrap z-20">
