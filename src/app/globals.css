@@ -4,16 +4,12 @@
 @tailwind utilities;
 
 *{
-    @apply transition
+    @apply transition font-extrabold tracking-tighter leading-tight
 }
 
 
 .highlight{
     @apply text-lime-500
-}
-
-section {
-    @apply h-[100vh] flex justify-center
 }
 
 html {

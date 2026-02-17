@@ -7,11 +7,11 @@ const Hero: React.FC<HeroProps> = ({ headline, subheadline, ctas, className, ima
 
   return (
     <div
-      className={`${className} container px-5 py-14 flex flex-col md:px-0 md:flex-row w-full gap-12 justify-center items-center mx-auto `}
+      className={`${className} container h-[100vh] px-5 py-14 flex flex-col md:px-0 md:flex-row w-full gap-12 justify-center items-center mx-auto `}
     >
       <div className="flex flex-col pt-16 md:pt-0 w-full md:w-2/3 gap-9 items-start">
-        <h1 className="text-6xl font-bold lg:text-7xl" dangerouslySetInnerHTML={{__html: headline}}/>
-        {subheadline && <p className="text-xl font-semibold">{subheadline}</p>}
+        <h1 className="text-6xl  lg:text-7xl" dangerouslySetInnerHTML={{__html: headline}}/>
+        {subheadline && <p className="text-xl">{subheadline}</p>}
         <div className="flex gap-2">
           {ctas.map((cta) => (
             <Button key={cta.label} label={cta.label} type={cta.type} />

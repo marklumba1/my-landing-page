@@ -1,6 +1,5 @@
 "use client";
 import useToggle from "@/app/_lib/useToggle";
-import Button from "../Button/Button";
 import { Menu, X } from "lucide-react";
 import NavBarProps from "./NavBar.types";
 import Link from "next/link";
@@ -16,11 +15,8 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
     <nav
       className={`fixed top-0 left-0 right-0 ${navClass} transition-all ease-in p-5 md:px-0 z-20 shadow-sm`}
     >
-      <div className="container mx-auto flex justify-between  text-3xl font-bold leading-tight tracking-tight ">
-        <Link
-          href={"#top"}
-          className="text-nowrap z-20"
-        >
+      <div className="container mx-auto flex justify-between  text-3xl ">
+        <Link href={"#top"} className="text-nowrap z-20">
           {brand}
         </Link>
 
@@ -31,7 +27,6 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
         <ul
           className={`${!value ? "hidden" : ""} ${navClass} absolute top-0 z-10 pt-20 h-[100vh] lg:static lg:flex lg:h-fit lg:pt-0 bg-white left-0 right-0 lg:bg-transparent flex flex-col lg:flex-row gap-6 justify-start items-center lg:items-center lg:top-0 lg:bottom-0`}
         >
-          
           {links.map(({ label, url }) => (
             <Link
               key={label}
