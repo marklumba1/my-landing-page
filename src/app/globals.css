@@ -8,10 +8,15 @@
 }
 
 
-a:hover, .highlight{
+.highlight{
     @apply text-lime-500
+}
+
+section {
+    @apply h-[100vh] flex justify-center
 }
 
 html {
   scroll-behavior: smooth;
+  
 }

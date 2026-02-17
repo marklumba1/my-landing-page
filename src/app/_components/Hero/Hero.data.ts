@@ -1,16 +1,21 @@
 import HeroProps from "./Hero.types";
 
 const heroData: HeroProps = {
-  headline: "Hi, <b>I’m Mark O. Lumba</b> — creating standout <span class=highlight>frontend experiences.</span>",
+  headline: "Hey, I’m <span class=highlight>Mark Lumba</span>. </br>Here, you can see what I’m building and creating.",
   subheadline:
-    "I build interactive and scalable web applications using React, Next.js, and TypeScript. My focus is on creating reusable components, clean and maintainable code, and seamless user experiences.",
-  cta: [
+    "",
+  ctas: [
     { label: "View My Projects", type: "primary" },
     { label: "See a Live Demo", type: "secondary" },
   ],
   footer:
     "Delivered over 20+ front-end projects, creating maintainable components and interactive user experiences.",
   brands: ["React", "Next.js", "TypeScript", "Tailwind CSS", "AEM"],
+  className: "",
+  image: {
+    src: "/me.jpg",
+    alt: "me"
+  }
 };
 
 export default heroData;
