@@ -6,3 +6,12 @@
 *{
     @apply transition
 }
+
+
+a:hover, .highlight{
+    @apply text-lime-500
+}
+
+html {
+  scroll-behavior: smooth;
+}

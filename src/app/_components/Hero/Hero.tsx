@@ -1,49 +1,26 @@
 "use client";
 import Image from "next/image";
-import Announcement from "../Announcement/Announcement";
 import Button from "../Button/Button";
-import data from "./data.json";
-import Background from "../Background/Background";
-
-export default function Hero({className}: {className?: string}) {
-  const { headline, subheadline, announcement, cta, badge, footer, brands } =
-    data;
+import heroData from "./Hero.data";
+export default function Hero({ className }: { className?: string }) {
+  const { headline, subheadline, cta, footer, brands } = heroData;
   return (
-    <Background>
-      <div className={`${className} flex flex-col gap-5 items-center max-w-7xl mx-auto`}>
-        <Announcement link="/" text={announcement} label={badge} />
-        <h1 className="font-bold text-5xl text-center max-w-96">{headline}</h1>
-        <p>{subheadline}</p>
-        <div className="flex gap-2 w-full justify-center">
+    <div
+      className={`${className} container h-[100vh] px-5 py-14 flex flex-col md:flex-row w-full gap-12 justify-center items-center mx-auto `}
+    >
+      <div className="flex flex-col pt-16 md:pt-0 w-full md:w-2/3 gap-9 items-start">
+        <h1 className="text-6xl lg:text-7xl" dangerouslySetInnerHTML={{__html: headline}}/>
+        <p className="text-xl font-semibold">{subheadline}</p>
+        <div className="flex gap-2">
           {cta.map((cta) => (
             <Button key={cta.label} label={cta.label} type={cta.type} />
           ))}
         </div>
-        <div className="p-2 mt-10 relative bg-white rounded-md border-gray-200 shadow border">
-          <Image
-            src={"/person.svg"}
-            width={200}
-            height={200}
-            className="absolute hidden md:block -top-52 left-10"
-            alt="person"
-          />
-          <Image
-            src="/heropic.png"
-            width={1500}
-            height={1500}
-            className="border max-h-[500px] w-auto"
-            alt="hero"
-          />
-        </div>
-        <p>{footer}</p>
-        <div className="flex gap-5 max-w-56 justify-center flex-wrap">
-          {brands.map((brand) => (
-            <span key={brand} className="font-semibold text-lg capitalize">
-              {brand}
-            </span>
-          ))}
-        </div>
       </div>
-    </Background>
+
+      <div className="hidden md:block w-1/3 relative bg-white rounded-md border-gray-200">
+        <Image src={"/person.svg"} width={600} height={400} alt="person" />
+      </div>
+    </div>
   );
 }

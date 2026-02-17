@@ -1,30 +1,41 @@
 "use client";
 import useToggle from "@/app/_lib/useToggle";
 import Button from "../Button/Button";
-import data from "./data.json";
 import { Menu, X } from "lucide-react";
+import NavBarProps from "./NavBar.types";
+import Link from "next/link";
 
-const NavBar = () => {
-  const { logo, menu, cta } = data;
+const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
   const { value, toggle } = useToggle();
 
   return (
-    <nav className="flex relative justify-between">
-      <h1 className="flex items-center z-20 font-bold text-2xl">{logo}</h1>
-      <div className="flex gap-2 z-20">
-        {cta.map((cta) => (
-          <Button key={cta.label} className="hidden sm:block" label={cta.label} type={cta.type} />
-        ))}
-        <span onClick={toggle} className="ml-2 my-auto xl:hidden hover:cursor-pointer">
-          {!value ? <Menu size={30}/> : <X size={30}/>}
-        </span>
+    <nav className="fixed top-0 left-0 right-0 bg-white p-5 z-20 shadow-sm">
+      <div className="container mx-auto flex justify-between">
+        <Link href={"#home"} className="flex items-center z-20 font-bold text-2xl">
+          {brand}
+        </Link>
+      
+          <span
+            onClick={toggle}
+            className="ml-2 my-auto xl:hidden"
+          >
+            {!value ? <Menu size={30} /> : <X size={30} />}
+          </span>
+   
+        <ul
+          className={`${!value ? "hidden" : ""} absolute z-10 container mx-auto xl:flex bg-white top-[100%] left-0 right-0 xl:bg-transparent flex flex-col xl:flex-row gap-6 justify-end items-start xl:items-center xl:top-0 xl:bottom-0`}
+        >
+          {links.map(({ label, url }) => (
+            <Link
+              key={label}
+              href={url}
+              className="hover:cursor-pointer hover:border-b-lime-500 hover:border-b-2"
+            >
+              {label}
+            </Link>
+          ))}
+        </ul>
       </div>
-
-      <ul className={`${!value ? "hidden" : ""} absolute z-10 xl:flex border-red-500 bg-white top-[100%] left-0 right-0 xl:bg-transparent flex flex-col xl:flex-row  gap-4 justify-center items-start xl:items-center xl:top-0 xl:bottom-0`}>
-        {menu.map(({ label }) => (
-          <li key={label} className="hover:cursor-pointer">{label}</li>
-        ))}
-      </ul>
     </nav>
   );
 };
