@@ -7,4 +7,5 @@ export default interface CardProps extends ContentBlockProps{
     imageAsIcon?: boolean
     pills?: string[]
     border?: boolean
+    headingClass?: string
 }

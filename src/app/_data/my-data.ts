@@ -5,7 +5,7 @@ import SectionProps from "../_components/Section/Section.type";
 // Projects Section
 // ------------------
 export const projectsSection: SectionProps = {
-  heading: "My Projects",
+  heading: "Featured Projects",
   description: "A collection of personal projects where I’ve explored ideas, solved problems, and sharpened my craft. See what I’ve been building.",
   alignment: "center",
   id: "projects",
@@ -21,7 +21,6 @@ export const projects: CardProps[] = [
     alignment: "center",
     image: { src: "/images/weather-app.png", alt: "Weather Mok App interface showing current conditions and forecast" },
     link: "https://weather-mok.netlify.app/",
-    pills: ["React", "Tailwind", "Framer Motion"],
     className: "bg-yellow-900",
     theme: "dark"
   },
@@ -31,7 +30,6 @@ export const projects: CardProps[] = [
     alignment: "center",
     image: { src: "/images/portfolio-v2.png", alt: "Portfolio v2 modern interface" },
     link: "https://mark-lumba.netlify.app/",
-    pills: ["React", "Tailwind", "Framer Motion"],
     className: "bg-indigo-900",
       theme: "dark"
   },
@@ -43,38 +41,75 @@ export const projects: CardProps[] = [
     theme: "dark",
     image: { src: "/images/portfolio-v1.png", alt: "Screenshot of Portfolio v1 homepage layout" },
     link: "https://mark-lumba.netlify.app/",
-    pills: ["React", "Tailwind"],
     
+  }
+];
+
+// ------------------
+// Techstack Section
+// ------------------
+export const techStackSection: SectionProps = {
+  heading: "Tech Stack",
+  description: "The technologies and tools I use to build scalable and maintainable applications.",
+  alignment: "center",
+  id: "tech-stack",
+  columns: 3,
+};
+
+export const techStack: CardProps[] = [
+  {
+    heading: "React",
+    description: "Frontend Library",
+    alignment: "center",
+    imageAsIcon: true,
+    image: { src: "/images/tech/react.png", alt: "React logo" },
+    link: "https://reactjs.org/",
+    border: true
   },
   {
-    heading: "Jsontypecode",
-    description: "JSON API frontend",
-    className: "bg-green-900",
+    heading: "Next.js",
+    description: "React Framework",
     alignment: "center",
-      theme: "dark",
-    link: "https://sample-jsontypecode.netlify.app/",
-    image: { src: "/images/json.png", alt: "Sample JSONPlaceholder project interface" },
-    pills: ["React", "Tailwind"],
+    imageAsIcon: true,
+    image: { src: "/images/tech/nextjs.png", alt: "Next.js logo" },
+    link: "https://nextjs.org/",
+    border: true
   },
   {
-    heading: "Shore Agents",
-    description: "Responsive UI demo",
-    className: "bg-lime-900",
+    heading: "TypeScript",
+    description: "Typed JavaScript",
     alignment: "center",
-      theme: "dark",
-    link: "https://shoreagents-demo.netlify.app/",
-    image: { src: "/images/shoreagents.png", alt: "ShoreAgents demo project interface" },
-    pills: ["JavaScript", "Tailwind"],
+    imageAsIcon: true,
+    image: { src: "/images/tech/typescript.png", alt: "TypeScript logo" },
+    link: "https://www.typescriptlang.org/",
+    border: true
   },
   {
-    heading: "Dotty",
-    description: "Movie promo site",
-    className: "bg-teal-900",
+    heading: "Tailwind CSS",
+    description: "Utility-first CSS",
     alignment: "center",
-    link: "https://dotty-app.netlify.app/",
-    image: { src: "/images/dotty.png", alt: "Dotty App movie promotional site interface" },
-    pills: ["JavaScript", "Tailwind"],
-      theme: "dark"
+    imageAsIcon: true,
+    image: { src: "/images/tech/tailwind.png", alt: "Tailwind CSS logo" },
+    link: "https://tailwindcss.com/",
+    border: true
+  },
+  {
+    heading: "JavaScript",
+    description: "Programming Language",
+    alignment: "center",
+    imageAsIcon: true,
+    image: { src: "/images/tech/javascript.png", alt: "JavaScript logo" },
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    border: true
+  },
+  {
+    heading: "Framer Motion",
+    description: "Animations",
+    alignment: "center",
+    imageAsIcon: true,
+    image: { src: "/images/tech/framer-motion.png", alt: "Framer Motion logo" },
+    link: "https://www.framer.com/motion/",
+    border: true
   },
 ];
 
@@ -84,67 +119,50 @@ export const projects: CardProps[] = [
 // ------------------
 export const experienceSection: SectionProps = {
   heading: "Experience",
-  description: "A glimpse at some of the projects and roles I’ve taken on, from consulting gigs to government systems. Take a peek and see what I’ve been building!",
-  theme: "light",
+  theme: "dark",
+  className: "bg-slate-950",
   alignment: "start",
   id: "experience",
-  columns: 3
+  columns: 1
 };
 
 export const experiences: CardProps[] = [
   {
     heading: "Myridius",
-    description: "AEM React Frontend",
+    description: "AEM React Developer",
+    pills: ["2024 – Present"],
+    className: "hover:bg-cyan-800 border-cyan-800",
+    headingClass: "group-hover:text-slate-950",
     border: true,
-    imageAsIcon: true,
-    alignment: "center",
-    image: { src: "/images/myridius.png", alt: "myridius icon" },
-    pills: ["Adobe Experience Manager (AEM)", "React.js", "Agile"],
+    theme: "dark",
   },
   {
     heading: "Accenture",
     description: "Advanced App Engineering Sr Analyst",
-    border: true,
-     imageAsIcon: true,
-    alignment: "center",
-        image: { src: "/images/acn.png", alt: "acn icon" },
-    pills: ["React.js", "Tailwind CSS", "Agile"],
+    pills: ["2023 – 2024"],
+    className: "bg-indigo-800",
+    theme: "dark",
   },
   {
-    heading: "Jose B Lingad Memorial General Hospital",
+    heading: "Jose B. Lingad Memorial General Hospital",
     description: "Information System Analyst I",
-    border: true,
-     imageAsIcon: true,
-    alignment: "center",
-        image: { src: "/images/jbl.png", alt: "myridius icon" },
-    pills: ["Vue", "React", "HTML5", "CSS", "Bootstrap", "MySQL", "PHP"],
+    pills: ["2022 – 2023"],
+    className: "bg-emerald-800",
+    theme: "dark",
   },
   {
     heading: "DICT Philippines",
     description: "Project Development Officer III",
-    border: true,
-        image: { src: "/images/dict.png", alt: "dict icon" },
-             imageAsIcon: true,
-                 alignment: "center",
-    pills: ["CSS", "HTML", "JavaScript"],
-  },
-  {
-    heading: "Jose B Lingad Memorial General Hospital",
-    description: "Administrative Assistant I",
-    border: true,
-     imageAsIcon: true,
-    alignment: "center",
-      image: { src: "/images/jbl.png", alt: "jbl icon" },
-    pills: ["Interpersonal Skills", "Leadership"],
+    pills: ["2021 – 2022"],
+    className: "bg-orange-800",
+    theme: "dark",
   },
   {
     heading: "Accenture",
     description: "Associate Software Engineer",
-    border: true,
-     imageAsIcon: true,
-    alignment: "center",
-      image: { src: "/images/acn.png", alt: "acn icon" },
-    pills: ["React.js", "JavaScript", "Functional Testing"],
+    pills: ["2017 – 2018"],
+    className: "bg-pink-800",
+    theme: "dark",
   },
 ];
 
@@ -153,7 +171,8 @@ export const experiences: CardProps[] = [
 // ------------------
 export const educationSection: SectionProps = {
   heading: "Education",
-  className: "py-20 bg-slate-950",
+  description: "My formal education and certifications that shaped my technical skills.",
+  className: "bg-slate-950",
   theme: "dark",
   alignment: "start",
   id: "education"
