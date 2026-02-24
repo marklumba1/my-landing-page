@@ -16,3 +16,5 @@ export type ContentBlockProps = {
   theme?: Theme;
   alignment?: Alignment;
 };
+
+export type Columns = 1 | 2 | 3

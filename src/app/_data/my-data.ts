@@ -5,7 +5,8 @@ import SectionProps from "../_components/Section/Section.type";
 // Projects Section
 // ------------------
 export const projectsSection: SectionProps = {
-  heading: "Projects",
+  heading: "My Projects",
+  description: "A collection of personal projects where I’ve explored ideas, solved problems, and sharpened my craft. See what I’ve been building.",
   alignment: "center",
   id: "projects",
   columns: 3,
@@ -51,7 +52,7 @@ export const projects: CardProps[] = [
     className: "bg-green-900",
     alignment: "center",
       theme: "dark",
-    link: "https://sample-jsontypecode.netlify.app/posts",
+    link: "https://sample-jsontypecode.netlify.app/",
     image: { src: "/images/json.png", alt: "Sample JSONPlaceholder project interface" },
     pills: ["React", "Tailwind"],
   },
@@ -61,7 +62,7 @@ export const projects: CardProps[] = [
     className: "bg-lime-900",
     alignment: "center",
       theme: "dark",
-    link: "https://shoreagents-demo.netlify.app/home",
+    link: "https://shoreagents-demo.netlify.app/",
     image: { src: "/images/shoreagents.png", alt: "ShoreAgents demo project interface" },
     pills: ["JavaScript", "Tailwind"],
   },

@@ -10,7 +10,7 @@ const heroData: HeroProps = {
   footer:
     "Delivered over 20+ front-end projects, creating maintainable components and interactive user experiences.",
   brands: ["React", "Next.js", "TypeScript", "Tailwind CSS", "AEM"],
-  className: "h-[100vh]",
+  className: "h-[50vh] md:h-[100vh]",
   image: {
     src: "/images/me.jpg",
     alt: "me"

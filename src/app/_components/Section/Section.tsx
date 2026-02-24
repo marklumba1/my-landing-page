@@ -1,12 +1,6 @@
 import getFontClassByTheme from "@/app/_lib/getFontColorClassByTheme";
 import SectionProps from "./Section.type";
-
-const columnMap: Record<1 | 2 | 3, string> = {
-  1: "md:grid-cols-1",
-  2: "md:grid-cols-2",
-  3: "md:grid-cols-3",
-};
-
+import { columnMapMD } from "@/app/_lib/maps";
 
 const Section: React.FC<SectionProps> = ({
   heading,
@@ -18,7 +12,7 @@ const Section: React.FC<SectionProps> = ({
   id,
   columns = 1,
 }) => {
-  const colClass = columnMap[columns]
+  const colClass = columnMapMD[columns]
   return (
     <section
       className={`${className} ${theme === "dark" && "bg-slate-950"} py-20 px-5 md:px-0`}
@@ -35,7 +29,7 @@ const Section: React.FC<SectionProps> = ({
         )}
         {description && (
           <p
-            className={`text-5xl mb-8 max-w-5xl text-${alignment}  ${getFontClassByTheme(theme)}`}
+            className={`text-5xl mb-10 text-${alignment}  ${getFontClassByTheme(theme)}`}
           >
             {description}
           </p>

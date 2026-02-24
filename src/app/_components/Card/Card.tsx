@@ -3,6 +3,7 @@ import CardWrapper from "../CardWrapper/CardWrapper";
 import CardProps from "./Card.types";
 import getFontColorClassByTheme from "@/app/_lib/getFontColorClassByTheme";
 import { Alignment } from "@/app/_types/common.types";
+import { justifyAlignmentMap, textAlignmentMap } from "@/app/_lib/maps";
 
 const Card: React.FC<CardProps> = ({
   heading,
@@ -21,17 +22,6 @@ const Card: React.FC<CardProps> = ({
       ? " border-8 border-slate-200"
       : "border-8 border-slate-950"
     : "";
-  const justifyAlignmentMap: Record<Alignment, string> = {
-    "start" : "justify-start",
-    "center" : "justify-center",
-    "end" : "justify-end"
-  }
-
-  const textAlignmentMap: Record<Alignment, string> = {
-    "start" : "text-start",
-    "center" : "text-center",
-    "end" : "text-end"
-  }
 
   return (
     <CardWrapper

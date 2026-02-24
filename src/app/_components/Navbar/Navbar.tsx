@@ -8,7 +8,7 @@ import useActiveSection from "@/app/_lib/useActiveSection";
 const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
   const { value, toggle } = useToggle();
   const activeTheme = useActiveSection();
-
+  console.log(activeTheme)
   return (
     <nav
       className={`${activeTheme === "dark" ? "bg-slate-950 text-slate-200" : "bg-white"} fixed top-0 left-0 right-0 transition-all ease-in px-5 py-6  md:px-0 z-20 shadow-sm`}
@@ -23,7 +23,7 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
         </span>
 
         <ul
-          className={`${!value ? "hidden" : ""} absolute top-0 z-10 pt-20 h-[100vh] lg:static lg:flex lg:h-fit lg:pt-0 bg-white left-0 right-0 lg:bg-transparent flex flex-col lg:flex-row gap-6 justify-start items-center lg:items-center lg:top-0 lg:bottom-0`}
+          className={`${!value ? "hidden" : ""} absolute top-0 z-10 pt-20 h-[100vh] lg:static lg:flex lg:h-fit lg:pt-0 ${activeTheme === "dark" ? "bg-slate-950 text-slate-200" : "bg-white"} left-0 right-0 lg:bg-transparent flex flex-col lg:flex-row gap-6 justify-start items-center lg:items-center lg:top-0 lg:bottom-0`}
         >
           {links.map(
             ({
@@ -35,6 +35,7 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
                 key={label}
                 href={url}
                 className="hover:cursor-pointer group relative px-1"
+                onClick={toggle}
               >
                 {label}
                 <div
