@@ -1,26 +1,35 @@
-import Image from "next/image";
 import Hero from "./_components/Hero/Hero";
-
-import heroData from "./_components/Hero/Hero.data";
+import heroData from "./_data/Hero.data";
 import Section from "./_components/Section/Section";
-import {
-  featureCards,
-  featuredWorkSection,
-} from "./_components/Section/FeaturedWork.data";
-import FeatureCard from "./_components/FeatureCard/FeatureCard";
+import Card from "./_components/Card/Card";
+import { education, educationSection, experiences, experienceSection, projects, projectsSection } from "./_data/my-data";
 
 const HomePage: React.FC = () => {
   return (
     <div>
-      <section id="home">
+      <Section id="home">
         <Hero {...heroData} />
-      </section>
-      <Section {...featuredWorkSection}>
-        <div className="grid grid-cols-3 gap-10">
-          {featureCards.map((card, index) => (
-            <FeatureCard {...card} key={index}/>
-          ))}
-        </div>
+      </Section>
+        <Section {...projectsSection}>
+        {projects.map((project, index) => (
+          <Card {...project} key={index} />
+        ))}
+      </Section>
+        <Section {...experienceSection}>
+        {experiences.map((experience, index) => (
+          <Card
+            {...experience}
+            key={index}
+          />
+        ))}
+      </Section>
+      <Section {...educationSection}>
+        {education.map((course, index) => (
+          <Card
+            {...course}
+            key={index}
+          />
+        ))}
       </Section>
     </div>
   );

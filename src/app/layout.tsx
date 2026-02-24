@@ -1,6 +1,6 @@
 import NavBar from "./_components/Navbar/Navbar";
-import navBarData from "./_components/Navbar/Navbar.data"
 import "../app/globals.css";
+import navBarData from "./_data/Navbar.data";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">

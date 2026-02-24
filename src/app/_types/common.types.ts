@@ -8,7 +8,7 @@ export type LinkItem = {
 export type Theme = "light" | "dark";
 
 export type ContentBlockProps = {
-  heading: string;
+  heading?: string;
   description?: string;
   className?: string;
   theme?: Theme

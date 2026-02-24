@@ -1,21 +1,52 @@
-import getFontClassByTheme from "@/app/_lib/getFontClassByTheme";
+import getFontClassByTheme from "@/app/_lib/getFontColorClassByTheme";
 import SectionProps from "./Section.type";
+
+const columnMap: Record<1 | 2 | 3, string> = {
+  1: "md:grid-cols-1",
+  2: "md:grid-cols-2",
+  3: "md:grid-cols-3",
+};
+
 
 const Section: React.FC<SectionProps> = ({
   heading,
   description,
   children,
   className,
-  theme,
-  alignment
+  theme = "light",
+  alignment,
+  id,
+  columns = 1,
 }) => {
- 
+  const colClass = columnMap[columns]
   return (
-    <section className={className}>
+    <section
+      className={`${className} ${theme === "dark" && "bg-slate-950"} py-20 px-5 md:px-0`}
+      id={id}
+      data-theme={theme}
+    >
       <div className="container mx-auto">
-        <h1 className={`text-8xl text-${alignment} font-extrabold ${getFontClassByTheme(theme)}`}>{heading}</h1>
-        <p className={`text-3xl text-${alignment} font-extrabold ${getFontClassByTheme(theme)}`}>{description}</p>
-        {children}
+        {heading && (
+          <h1
+            className={`text-6xl mb-8 text-${alignment} ${getFontClassByTheme(theme)}`}
+          >
+            {heading}
+          </h1>
+        )}
+        {description && (
+          <p
+            className={`text-5xl mb-8 max-w-5xl text-${alignment}  ${getFontClassByTheme(theme)}`}
+          >
+            {description}
+          </p>
+        )}
+        {children ? (
+          columns ? (
+            <div className={`grid grid-cols-1 ${colClass} gap-10`}>{children}</div>
+          ) : (
+            children
+          )
+        ) : null}
       </div>
     </section>
   );
