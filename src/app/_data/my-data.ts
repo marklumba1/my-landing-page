@@ -113,6 +113,7 @@ export const techStack: CardProps[] = [
 // ------------------
 export const experienceSection: SectionProps = {
   heading: "Experience",
+  description: "My professional journey across teams, code, and results.",
   theme: "dark",
   className: "bg-slate-950",
   alignment: "start",
@@ -125,9 +126,7 @@ export const experiences: CardProps[] = [
     heading: "Myridius",
     description: "AEM React Developer",
     pills: ["2024 – Present"],
-    className: "hover:bg-cyan-800 border-cyan-800",
-    headingClass: "group-hover:text-slate-950",
-    border: true,
+    className: "bg-cyan-800",
     theme: "dark",
   },
   {
