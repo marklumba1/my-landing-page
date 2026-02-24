@@ -12,7 +12,7 @@ const heroData: HeroProps = {
   brands: ["React", "Next.js", "TypeScript", "Tailwind CSS", "AEM"],
   className: "h-[100vh]",
   image: {
-    src: "/me.jpg",
+    src: "/images/me.jpg",
     alt: "me"
   }
 };

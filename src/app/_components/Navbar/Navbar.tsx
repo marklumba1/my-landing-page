@@ -29,8 +29,7 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
             ({
               label,
               url,
-              lightThemeBarColorClass,
-              darkThemeBarColorClass,
+              theme
             }) => (
               <Link
                 key={label}
@@ -39,7 +38,7 @@ const NavBar: React.FC<NavBarProps> = ({ brand, links }) => {
               >
                 {label}
                 <div
-                  className={`${activeTheme === "dark" ? darkThemeBarColorClass : lightThemeBarColorClass} h-2 bg-slate-900 transition-all ease-in duration-200 group-hover:h-[90%] group-hover:bottom-1 absolute bottom-2 left-0 w-full -z-10`}
+                  className={`${theme[activeTheme]} h-2 transition-all ease-in duration-200 group-hover:h-[90%] group-hover:bottom-1 absolute bottom-2 left-0 w-full -z-10`}
                 />
               </Link>
             ),

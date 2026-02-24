@@ -2,6 +2,7 @@ import Image from "next/image";
 import CardWrapper from "../CardWrapper/CardWrapper";
 import CardProps from "./Card.types";
 import getFontColorClassByTheme from "@/app/_lib/getFontColorClassByTheme";
+import { Alignment } from "@/app/_types/common.types";
 
 const Card: React.FC<CardProps> = ({
   heading,
@@ -20,6 +21,18 @@ const Card: React.FC<CardProps> = ({
       ? " border-8 border-slate-200"
       : "border-8 border-slate-950"
     : "";
+  const justifyAlignmentMap: Record<Alignment, string> = {
+    "start" : "justify-start",
+    "center" : "justify-center",
+    "end" : "justify-end"
+  }
+
+  const textAlignmentMap: Record<Alignment, string> = {
+    "start" : "text-start",
+    "center" : "text-center",
+    "end" : "text-end"
+  }
+
   return (
     <CardWrapper
       className={`${className} ${getFontColorClassByTheme(theme)} hover:-translate-y-3 duration-300 h-fit rounded-2xl shadow-2xl overflow-hidden ${borderClass}`}
@@ -46,12 +59,12 @@ const Card: React.FC<CardProps> = ({
         )
       ) : null}
 
-      <div className={`p-5 text-${alignment}`}>
+      <div className={`p-5 ${textAlignmentMap[alignment ?? "start"]}`}>
         <h1 className={`text-4xl mb-2`}>{heading}</h1>
         <p className={`text-2xl`}>{description}</p>
       </div>
       {pills && (
-        <div className={`flex flex-wrap justify-${alignment} gap-2  px-5 pb-5`}>
+        <div className={`flex flex-wrap ${justifyAlignmentMap[alignment ?? "start"]} gap-2  px-5 pb-5`}>
           {pills.map((pill, index) => (
             <span
               key={index}

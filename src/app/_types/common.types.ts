@@ -7,10 +7,12 @@ export type LinkItem = {
 
 export type Theme = "light" | "dark";
 
+export type Alignment = "start" | "center" | "end"
+
 export type ContentBlockProps = {
   heading?: string;
   description?: string;
   className?: string;
-  theme?: Theme
-  alignment?: "start" | "center" | "end"
+  theme?: Theme;
+  alignment?: Alignment;
 };
