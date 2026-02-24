@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Button from "../Button/Button";
 import HeroProps from "./Hero.types";
+import Link from "next/link";
 const Hero: React.FC<HeroProps> = ({
   headline,
   subheadline,
-  ctas,
   className,
   image,
 }) => {
@@ -19,11 +19,6 @@ const Hero: React.FC<HeroProps> = ({
           dangerouslySetInnerHTML={{ __html: headline }}
         />
         {subheadline && <p className="text-5xl">{subheadline}</p>}
-        <div className="flex gap-2 mt-5">
-          {ctas.map((cta) => (
-            <Button key={cta.label} label={cta.label} type={cta.type} />
-          ))}
-        </div>
       </div>
 
       <div className="hidden  md:block w-1/3 relative bg-white border-gray-200">

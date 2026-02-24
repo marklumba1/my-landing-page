@@ -9,8 +9,8 @@ const Timeline = ({ cards }: { cards: CardProps[] }) => {
         const leftClass = "rounded-s-xl p-2 bg-white h-full w-fit pr-10 -mr-5"
         const rightClass = "rounded-e-xl p-2 bg-white h-full w-fit pl-10 -ml-5"
 
-        const pill = <p className={`${switchCard ? leftClass + " rotate-3" : rightClass + " -rotate-3"} w-fit text-6xl flex items-center -mt-[8px] -mr-1`}>{card.pills?.join("")}</p>
-        const position = <p className={`${!switchCard ? leftClass + " text-end rotate-2" : rightClass + " -rotate-2"} text-4xl`} >{card.heading}<br/>{card.description}</p> 
+        const pill = <p className={`${switchCard ? leftClass + " rotate-3" : rightClass + " -rotate-3"} cursor-pointer hover:-translate-y-3 duration-300 w-fit text-6xl flex items-center -mt-[8px] -mr-1`}>{card.pills?.join("")}</p>
+        const position = <p className={`${!switchCard ? leftClass + " text-end rotate-2" : rightClass + " -rotate-2"} cursor-pointer hover:-translate-y-3 duration-300 text-4xl`} >{card.heading}<br/>{card.description}</p> 
 
         const leftContent = switchCard ? pill : position
         const rightContent = switchCard ? position : pill

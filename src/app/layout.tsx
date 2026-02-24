@@ -1,12 +1,14 @@
 import NavBar from "./_components/Navbar/Navbar";
 import "../app/globals.css";
 import navBarData from "./_data/Navbar.data";
+import { Footer } from "./_components/Footer/Footer";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body>
-        <NavBar {...navBarData}/>
+        <NavBar {...navBarData} />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

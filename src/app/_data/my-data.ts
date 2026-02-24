@@ -62,7 +62,6 @@ export const techStack: CardProps[] = [
     description: "Frontend Library",
     alignment: "center",
     imageAsIcon: true,
-    image: { src: "/images/tech/react.png", alt: "React logo" },
     link: "https://reactjs.org/",
     border: true
   },
@@ -71,7 +70,6 @@ export const techStack: CardProps[] = [
     description: "React Framework",
     alignment: "center",
     imageAsIcon: true,
-    image: { src: "/images/tech/nextjs.png", alt: "Next.js logo" },
     link: "https://nextjs.org/",
     border: true
   },
@@ -80,7 +78,6 @@ export const techStack: CardProps[] = [
     description: "Typed JavaScript",
     alignment: "center",
     imageAsIcon: true,
-    image: { src: "/images/tech/typescript.png", alt: "TypeScript logo" },
     link: "https://www.typescriptlang.org/",
     border: true
   },
@@ -89,7 +86,6 @@ export const techStack: CardProps[] = [
     description: "Utility-first CSS",
     alignment: "center",
     imageAsIcon: true,
-    image: { src: "/images/tech/tailwind.png", alt: "Tailwind CSS logo" },
     link: "https://tailwindcss.com/",
     border: true
   },
@@ -98,7 +94,6 @@ export const techStack: CardProps[] = [
     description: "Programming Language",
     alignment: "center",
     imageAsIcon: true,
-    image: { src: "/images/tech/javascript.png", alt: "JavaScript logo" },
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     border: true
   },
@@ -107,7 +102,6 @@ export const techStack: CardProps[] = [
     description: "Animations",
     alignment: "center",
     imageAsIcon: true,
-    image: { src: "/images/tech/framer-motion.png", alt: "Framer Motion logo" },
     link: "https://www.framer.com/motion/",
     border: true
   },
@@ -172,8 +166,6 @@ export const experiences: CardProps[] = [
 export const educationSection: SectionProps = {
   heading: "Education",
   description: "My formal education and certifications that shaped my technical skills.",
-  className: "bg-slate-950",
-  theme: "dark",
   alignment: "start",
   id: "education"
 };
@@ -182,22 +174,22 @@ export const education: CardProps[] = [
   {
     heading: "Bachelor of Science Information Technology",
     description: "Mary the Queen College",
-    className: "bg-sky-900",
-    theme: "dark",
+    className: "!border-sky-900 text-sky-900 hover:bg-sky-900 hover:text-white",
     pills: ["2014 - 2017"],
+    border: true
   },
   {
     heading: "ICT major in Programming",
     description: "Next Generation College",
-    className: "bg-lime-900",
-    theme: "dark",
+    className: "!border-lime-900 text-lime-900 hover:bg-lime-900 hover:text-white",
+    border: true,
     pills: ["2013 - 2014"],
   },
   {
     heading: "Certificate in Industrial Technology (Computer)",
     description: "Bulacan State University",
-    className: "bg-yellow-900",
-    theme: "dark",
+    className: "!border-yellow-900 text-yellow-900 hover:bg-yellow-900 hover:text-white",
+    border: true,
     pills: ["2011 - 2013"],
   },
 ];

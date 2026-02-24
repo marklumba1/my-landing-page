@@ -7,28 +7,36 @@ const navBarData: NavBarProps = {
       label: "Projects",
       url: "#projects",
       theme: {
-        dark: "bg-red-500",
-        light: "bg-cyan-700"
+        dark: "bg-red-700",
+        light: "bg-cyan-300"
       }
-
+    },
+      {
+      label: "Tech Stack",
+      url: "#techstack",
+      theme: {
+        dark: "bg-purple-700",
+        light: "bg-yellow-300"
+      }
     },
     {
       label: "Experience",
       url: "#experience",
       theme: {
-        dark: "bg-blue-500",
-        light: "bg-orange-700"
+        dark: "bg-blue-700",
+        light: "bg-orange-300"
       }
     },
     {
       label: "Education",
       url: "#education",
       theme: {
-        dark: "bg-green-500",
-        light: "bg-rose-700"
+        dark: "bg-green-700",
+        light: "bg-rose-300"
       }
     }
-  ],
+  
+  ]
 };
 
 export default navBarData;
